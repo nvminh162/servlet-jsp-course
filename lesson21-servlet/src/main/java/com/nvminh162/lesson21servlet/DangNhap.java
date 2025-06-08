@@ -11,14 +11,13 @@ import jakarta.servlet.annotation.*;
 public class DangNhap extends HttpServlet {
     private String message;
 
-    public void init() {
-        message = "Hello World!";
-    }
+    public void init() { message = "Hello World!"; }
 
     public void doGet(HttpServletRequest request, HttpServletResponse response) throws IOException {
         try {
             // Set character encoding
             response.setCharacterEncoding("UTF-8");
+            request.setCharacterEncoding("UTF-8");
             response.setContentType("text/html");
 
             String tenDangNhap = request.getParameter("tenDangNhap");
